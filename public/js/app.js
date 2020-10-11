@@ -2806,14 +2806,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
     JetApplicationLogo: _Jetstream_ApplicationLogo__WEBPACK_IMPORTED_MODULE_0__["default"]
-  }
+  },
+  props: ["data", "errors"]
 });
 
 /***/ }),
@@ -2829,10 +2827,11 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Jetstream_ApplicationLogo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Jetstream/ApplicationLogo */ "./resources/js/Jetstream/ApplicationLogo.vue");
 /* harmony import */ var _Jetstream_ApplicationMark__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Jetstream/ApplicationMark */ "./resources/js/Jetstream/ApplicationMark.vue");
-/* harmony import */ var _Jetstream_Dropdown__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../Jetstream/Dropdown */ "./resources/js/Jetstream/Dropdown.vue");
-/* harmony import */ var _Jetstream_DropdownLink__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../Jetstream/DropdownLink */ "./resources/js/Jetstream/DropdownLink.vue");
-/* harmony import */ var _Jetstream_NavLink__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../Jetstream/NavLink */ "./resources/js/Jetstream/NavLink.vue");
-/* harmony import */ var _Jetstream_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../Jetstream/ResponsiveNavLink */ "./resources/js/Jetstream/ResponsiveNavLink.vue");
+/* harmony import */ var _maleo_MaleoIcon__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../maleo/MaleoIcon */ "./resources/js/maleo/MaleoIcon.vue");
+/* harmony import */ var _Jetstream_Dropdown__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../Jetstream/Dropdown */ "./resources/js/Jetstream/Dropdown.vue");
+/* harmony import */ var _Jetstream_DropdownLink__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../Jetstream/DropdownLink */ "./resources/js/Jetstream/DropdownLink.vue");
+/* harmony import */ var _Jetstream_NavLink__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../Jetstream/NavLink */ "./resources/js/Jetstream/NavLink.vue");
+/* harmony import */ var _Jetstream_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../Jetstream/ResponsiveNavLink */ "./resources/js/Jetstream/ResponsiveNavLink.vue");
 //
 //
 //
@@ -3045,6 +3044,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+
 
 
 
@@ -3055,10 +3058,11 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     JetApplicationLogo: _Jetstream_ApplicationLogo__WEBPACK_IMPORTED_MODULE_0__["default"],
     JetApplicationMark: _Jetstream_ApplicationMark__WEBPACK_IMPORTED_MODULE_1__["default"],
-    JetDropdown: _Jetstream_Dropdown__WEBPACK_IMPORTED_MODULE_2__["default"],
-    JetDropdownLink: _Jetstream_DropdownLink__WEBPACK_IMPORTED_MODULE_3__["default"],
-    JetNavLink: _Jetstream_NavLink__WEBPACK_IMPORTED_MODULE_4__["default"],
-    JetResponsiveNavLink: _Jetstream_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_5__["default"]
+    JetDropdown: _Jetstream_Dropdown__WEBPACK_IMPORTED_MODULE_3__["default"],
+    JetDropdownLink: _Jetstream_DropdownLink__WEBPACK_IMPORTED_MODULE_4__["default"],
+    JetNavLink: _Jetstream_NavLink__WEBPACK_IMPORTED_MODULE_5__["default"],
+    JetResponsiveNavLink: _Jetstream_ResponsiveNavLink__WEBPACK_IMPORTED_MODULE_6__["default"],
+    MaleoIcon: _maleo_MaleoIcon__WEBPACK_IMPORTED_MODULE_2__["default"]
   },
   data: function data() {
     return {
@@ -3423,7 +3427,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
-/* harmony import */ var _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.vue");
 //
 //
 //
@@ -3442,12 +3445,567 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+ // import Welcome from "./../Jetstream/Welcome";
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
-    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Welcome: _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__["default"]
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"] // Welcome
+
+  },
+  props: ["data", "errors"],
+  data: function data() {
+    return {
+      editMode: false,
+      isOpen: false,
+      form: {
+        tag_line: null,
+        about_us: null,
+        handphone: null,
+        email: null,
+        ig: null,
+        fb: null,
+        d1: null,
+        d2: null,
+        d3: null,
+        d4: null,
+        d5: null
+      }
+    };
+  },
+  methods: {
+    openModal: function openModal() {
+      this.isOpen = true;
+    },
+    closeModal: function closeModal() {
+      this.isOpen = false;
+      this.reset();
+      this.editMode = false;
+    },
+    reset: function reset() {
+      this.form = {
+        title: null,
+        body: null
+      };
+    },
+    save: function save(data) {
+      this.$inertia.post("/posts", data);
+      this.reset();
+      this.closeModal();
+      this.editMode = false;
+    },
+    edit: function edit(data) {
+      this.form = Object.assign({}, data);
+      this.editMode = true;
+      this.openModal();
+    },
+    update: function update(data) {
+      data._method = "PATCH";
+
+      if (this.$inertia.post("/maleo-profile/update/" + data.id, data)) {
+        console.log(this.$inertia.page);
+        this.reset();
+        this.closeModal();
+      }
+    },
+    deleteRow: function deleteRow(data) {
+      if (!confirm("Are you sure want to remove?")) return;
+      data._method = "DELETE";
+      this.$inertia.post("/posts/" + data.id, data);
+      this.reset();
+      this.closeModal();
+    }
   }
 });
 
@@ -4975,6 +5533,262 @@ __webpack_require__.r(__webpack_exports__);
       this.form.put(route('teams.update', this.team), {
         preserveScroll: true
       });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/maleo-profile.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/maleo-profile.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../Layouts/AppLayout */ "./resources/js/Layouts/AppLayout.vue");
+/* harmony import */ var _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Jetstream/Welcome */ "./resources/js/Jetstream/Welcome.vue");
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  components: {
+    AppLayout: _Layouts_AppLayout__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Welcome: _Jetstream_Welcome__WEBPACK_IMPORTED_MODULE_1__["default"]
+  },
+  props: ["data", "errors"],
+  data: function data() {
+    return {
+      editMode: false,
+      isOpen: false,
+      form: {
+        title: null,
+        body: null
+      }
+    };
+  },
+  methods: {
+    openModal: function openModal() {
+      this.isOpen = true;
+    },
+    closeModal: function closeModal() {
+      this.isOpen = false;
+      this.reset();
+      this.editMode = false;
+    },
+    reset: function reset() {
+      this.form = {
+        title: null,
+        body: null
+      };
+    },
+    save: function save(data) {
+      this.$inertia.post("/posts", data);
+      this.reset();
+      this.closeModal();
+      this.editMode = false;
+    },
+    edit: function edit(data) {
+      this.form = Object.assign({}, data);
+      this.editMode = true;
+      this.openModal();
+    },
+    update: function update(data) {
+      data._method = "PUT";
+      this.$inertia.post("/posts/" + data.id, data);
+      this.reset();
+      this.closeModal();
+    },
+    deleteRow: function deleteRow(data) {
+      if (!confirm("Are you sure want to remove?")) return;
+      data._method = "DELETE";
+      this.$inertia.post("/posts/" + data.id, data);
+      this.reset();
+      this.closeModal();
     }
   }
 });
@@ -25502,22 +26316,14 @@ var render = function() {
       "div",
       { staticClass: "p-6 sm:px-20 bg-white border-b border-gray-200" },
       [
-        _c(
-          "div",
-          [_c("jet-application-logo", { staticClass: "block h-12 w-auto" })],
-          1
-        ),
-        _vm._v(" "),
         _c("div", { staticClass: "mt-8 text-2xl" }, [
           _vm._v(
-            "\n            Welcome to your Jetstream application!\n        "
+            "\n            Selamat datang di panel admin Maleo Project\n        "
           )
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "mt-6 text-gray-500" }, [
-          _vm._v(
-            "\n            Laravel Jetstream provides a beautiful, robust starting point for your next Laravel application. Laravel is designed\n            to help you build your application using a development environment that is simple, powerful, and enjoyable. We believe\n            you should love expressing your creativity through programming, so we have spent time carefully crafting the Laravel\n            ecosystem to be a breath of fresh air. We hope you love it.\n        "
-          )
+          _vm._v("\n            " + _vm._s(_vm.data) + "\n        ")
         ])
       ]
     ),
@@ -25855,11 +26661,11 @@ var render = function() {
                     "inertia-link",
                     { attrs: { href: _vm.route("dashboard") } },
                     [
-                      _c("jet-application-mark", {
-                        staticClass: "block h-9 w-auto"
+                      _c("img", {
+                        staticClass: "block h-9 w-auto",
+                        attrs: { src: "assets/img/maleo-icon.png", alt: "" }
                       })
-                    ],
-                    1
+                    ]
                   )
                 ],
                 1
@@ -25880,6 +26686,21 @@ var render = function() {
                     [
                       _vm._v(
                         "\n                            Dashboard\n                        "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "jet-nav-link",
+                    {
+                      attrs: {
+                        href: _vm.route("maleo-profile"),
+                        active: _vm.$page.currentRouteName == "maleo-profile"
+                      }
+                    },
+                    [
+                      _vm._v(
+                        "\n                            Maleo Profile\n                        "
                       )
                     ]
                   )
@@ -26429,7 +27250,6 @@ var render = function() {
                             _c(
                               "form",
                               {
-                                key: team.id,
                                 on: {
                                   submit: function($event) {
                                     $event.preventDefault()
@@ -27250,10 +28070,1172 @@ var render = function() {
           _c(
             "div",
             { staticClass: "bg-white overflow-hidden shadow-xl sm:rounded-lg" },
-            [_c("welcome")],
-            1
+            [
+              _c("div", [
+                _vm.$page.flash.message
+                  ? _c(
+                      "div",
+                      {
+                        staticClass:
+                          "bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md my-3",
+                        attrs: { role: "alert" }
+                      },
+                      [
+                        _c("div", { staticClass: "flex" }, [
+                          _c("div", [
+                            _c("p", { staticClass: "text-sm" }, [
+                              _vm._v(
+                                "\n                                    " +
+                                  _vm._s(_vm.$page.flash.message) +
+                                  "\n                                "
+                              )
+                            ])
+                          ])
+                        ])
+                      ]
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "p-6 sm:px-20 bg-white border-b border-gray-200"
+                  },
+                  [
+                    _c("div", { staticClass: "text-right" }, [
+                      _c(
+                        "button",
+                        {
+                          staticClass:
+                            "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ",
+                          on: {
+                            click: function($event) {
+                              return _vm.edit(_vm.data)
+                            }
+                          }
+                        },
+                        [
+                          _vm._v(
+                            "\n                                Ubah\n                            "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-8 text-2xl" }, [
+                      _vm._v(
+                        "\n                            Selamat datang di panel admin Maleo Project\n                        "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-6 text-gray-500" }, [
+                      _vm._v(
+                        "\n                            " +
+                          _vm._s(_vm.data.tag_line) +
+                          "\n                        "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-8 text-1xl" }, [
+                      _vm._v(
+                        "\n                            Tentang kami\n                        "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-6 text-gray-500" }, [
+                      _vm._v(
+                        "\n                            " +
+                          _vm._s(_vm.data.about_us) +
+                          "\n                        "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-6 text-1xl" }, [
+                      _vm._v(
+                        "\n                            alamat : " +
+                          _vm._s(_vm.data.alamat ? _vm.data.alamat : "-") +
+                          "\n                        "
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-3"
+                  },
+                  [
+                    _c("div", { staticClass: "p-6" }, [
+                      _c("div", { staticClass: "flex items-center" }, [
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "w-8 h-8 text-gray-400",
+                            attrs: {
+                              fill: "none",
+                              stroke: "currentColor",
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              viewBox: "0 0 24 24"
+                            }
+                          },
+                          [
+                            _c("path", {
+                              attrs: {
+                                d:
+                                  "M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "ml-4 text-lg text-gray-600 leading-7 font-semibold"
+                          },
+                          [
+                            _c(
+                              "a",
+                              { attrs: { href: "https://laravel.com/docs" } },
+                              [
+                                _vm._v(
+                                  "Design, Visual, dan\n                                        Communication"
+                                )
+                              ]
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "ml-12" }, [
+                        _c(
+                          "div",
+                          { staticClass: "mt-2 text-sm text-gray-500" },
+                          [
+                            _vm._v(
+                              "\n                                    " +
+                                _vm._s(_vm.data.d1) +
+                                "\n                                "
+                            )
+                          ]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "p-6 border-t border-gray-200 md:border-t-0 md:border-l"
+                      },
+                      [
+                        _c("div", { staticClass: "flex items-center" }, [
+                          _c(
+                            "svg",
+                            {
+                              staticClass: "w-8 h-8 text-gray-400",
+                              attrs: {
+                                fill: "none",
+                                stroke: "currentColor",
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round",
+                                "stroke-width": "2",
+                                viewBox: "0 0 24 24"
+                              }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  d:
+                                    "M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("path", {
+                                attrs: { d: "M15 13a3 3 0 11-6 0 3 3 0 016 0z" }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "ml-4 text-lg text-gray-600 leading-7 font-semibold"
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    Branding, Marketing dan Business\n                                    Consultant\n                                "
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "ml-12" }, [
+                          _c(
+                            "div",
+                            { staticClass: "mt-2 text-sm text-gray-500" },
+                            [
+                              _vm._v(
+                                "\n                                    " +
+                                  _vm._s(_vm.data.d2) +
+                                  "\n                                "
+                              )
+                            ]
+                          )
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "p-6 border-t border-gray-200" }, [
+                      _c("div", { staticClass: "flex items-center" }, [
+                        _c(
+                          "svg",
+                          {
+                            staticClass: "w-8 h-8 text-gray-400",
+                            attrs: {
+                              fill: "none",
+                              stroke: "currentColor",
+                              "stroke-linecap": "round",
+                              "stroke-linejoin": "round",
+                              "stroke-width": "2",
+                              viewBox: "0 0 24 24"
+                            }
+                          },
+                          [
+                            _c("path", {
+                              attrs: {
+                                d:
+                                  "M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                              }
+                            })
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "div",
+                          {
+                            staticClass:
+                              "ml-4 text-lg text-gray-600 leading-7 font-semibold"
+                          },
+                          [
+                            _vm._v(
+                              "\n                                    Riset dan Konsultan Penelitian\n                                "
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "ml-12" }, [
+                        _c(
+                          "div",
+                          { staticClass: "mt-2 text-sm text-gray-500" },
+                          [
+                            _vm._v(
+                              "\n                                    " +
+                                _vm._s(_vm.data.d3) +
+                                "\n                                "
+                            )
+                          ]
+                        )
+                      ])
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "bg-gray-200 bg-opacity-25 grid grid-cols-1 md:grid-cols-2"
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "p-6 border-t border-gray-200 md:border-l"
+                      },
+                      [
+                        _c("div", { staticClass: "flex items-center" }, [
+                          _c(
+                            "svg",
+                            {
+                              staticClass: "w-8 h-8 text-gray-400",
+                              attrs: {
+                                fill: "none",
+                                stroke: "currentColor",
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round",
+                                "stroke-width": "2",
+                                viewBox: "0 0 24 24"
+                              }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  d:
+                                    "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "ml-4 text-lg text-gray-600 leading-7 font-semibold"
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    Software Development\n                                "
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "ml-12" }, [
+                          _c(
+                            "div",
+                            { staticClass: "mt-2 text-sm text-gray-500" },
+                            [
+                              _vm._v(
+                                "\n                                    " +
+                                  _vm._s(_vm.data.d4) +
+                                  "\n                                "
+                              )
+                            ]
+                          )
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "p-6 border-t border-gray-200 md:border-l"
+                      },
+                      [
+                        _c("div", { staticClass: "flex items-center" }, [
+                          _c(
+                            "svg",
+                            {
+                              staticClass: "w-8 h-8 text-gray-400",
+                              attrs: {
+                                fill: "none",
+                                stroke: "currentColor",
+                                "stroke-linecap": "round",
+                                "stroke-linejoin": "round",
+                                "stroke-width": "2",
+                                viewBox: "0 0 24 24"
+                              }
+                            },
+                            [
+                              _c("path", {
+                                attrs: {
+                                  d:
+                                    "M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
+                                }
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "ml-4 text-lg text-gray-600 leading-7 font-semibold"
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    Leadership, Problem Solving, dan Public\n                                    Speaking\n                                "
+                              )
+                            ]
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "ml-12" }, [
+                          _c(
+                            "div",
+                            { staticClass: "mt-2 text-sm text-gray-500" },
+                            [
+                              _vm._v(
+                                "\n                                    " +
+                                  _vm._s(_vm.data.d5) +
+                                  "\n                                "
+                              )
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "p-6 sm:px-20 bg-white border-b border-gray-200"
+                  },
+                  [
+                    _c("div", { staticClass: "mt-8 text-2xl" }, [
+                      _vm._v(
+                        "\n                            Sosial Media\n                        "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-6 text-1xl" }, [
+                      _vm._v(
+                        "\n                            Email : " +
+                          _vm._s(_vm.data.email ? _vm.data.email : "-") +
+                          "\n                        "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-6 text-1xl" }, [
+                      _vm._v(
+                        "\n                            Wa :\n                            " +
+                          _vm._s(
+                            _vm.data.handphone ? "+" + _vm.data.handphone : "-"
+                          ) +
+                          "\n                        "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "mt-6 text-1xl" }, [
+                      _vm._v(
+                        "\n                            Instagram : " +
+                          _vm._s(_vm.data.ig ? _vm.data.ig : "-") +
+                          "\n                        "
+                      )
+                    ])
+                  ]
+                )
+              ])
+            ]
           )
-        ])
+        ]),
+        _vm._v(" "),
+        _vm.isOpen
+          ? _c(
+              "div",
+              {
+                staticClass:
+                  "fixed z-10 inset-0 overflow-y-auto ease-out duration-400"
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+                  },
+                  [
+                    _c(
+                      "div",
+                      { staticClass: "fixed inset-0 transition-opacity" },
+                      [
+                        _c("div", {
+                          staticClass: "absolute inset-0 bg-gray-500 opacity-75"
+                        })
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("span", {
+                      staticClass:
+                        "hidden sm:inline-block sm:align-middle sm:h-screen"
+                    }),
+                    _vm._v("​\n                "),
+                    _c(
+                      "div",
+                      {
+                        staticClass:
+                          "inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full",
+                        attrs: {
+                          role: "dialog",
+                          "aria-modal": "true",
+                          "aria-labelledby": "modal-headline"
+                        }
+                      },
+                      [
+                        _c("form", [
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4"
+                            },
+                            [
+                              _c("div", {}, [
+                                _c("div", { staticClass: "mb-4" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass:
+                                        "block text-gray-700 text-sm font-bold mb-2",
+                                      attrs: { for: "exampleFormControlInput1" }
+                                    },
+                                    [_vm._v("Tagline:")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.form.tag_line,
+                                        expression: "form.tag_line"
+                                      }
+                                    ],
+                                    staticClass:
+                                      "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                    attrs: {
+                                      type: "text",
+                                      id: "exampleFormControlInput1",
+                                      placeholder: "Masukan Tagline"
+                                    },
+                                    domProps: { value: _vm.form.tag_line },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.form,
+                                          "tag_line",
+                                          $event.target.value
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm.$page.errors.tag_line
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "text-red-500" },
+                                        [
+                                          _vm._v(
+                                            "\n                                        " +
+                                              _vm._s(
+                                                _vm.$page.errors.tag_line[0]
+                                              ) +
+                                              "\n                                    "
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "mb-4" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass:
+                                        "block text-gray-700 text-sm font-bold mb-2",
+                                      attrs: { for: "exampleFormControlInput2" }
+                                    },
+                                    [_vm._v("Alamat:")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("textarea", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.form.alamat,
+                                        expression: "form.alamat"
+                                      }
+                                    ],
+                                    staticClass:
+                                      "shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                    attrs: {
+                                      rows: "4",
+                                      id: "exampleFormControlInput2",
+                                      placeholder: "Masukan Alamat"
+                                    },
+                                    domProps: { value: _vm.form.alamat },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.form,
+                                          "alamat",
+                                          $event.target.value
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm.$page.errors.alamat
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "text-red-500" },
+                                        [
+                                          _vm._v(
+                                            "\n                                        " +
+                                              _vm._s(
+                                                _vm.$page.errors.alamat[0]
+                                              ) +
+                                              "\n                                    "
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "mb-4" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass:
+                                        "block text-gray-700 text-sm font-bold mb-2",
+                                      attrs: { for: "exampleFormControlInput2" }
+                                    },
+                                    [_vm._v("About us:")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("textarea", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.form.about_us,
+                                        expression: "form.about_us"
+                                      }
+                                    ],
+                                    staticClass:
+                                      "shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                    attrs: {
+                                      rows: "4",
+                                      id: "exampleFormControlInput2",
+                                      placeholder: "Masukan about_us"
+                                    },
+                                    domProps: { value: _vm.form.about_us },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.form,
+                                          "about_us",
+                                          $event.target.value
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm.$page.errors.about_us
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "text-red-500" },
+                                        [
+                                          _vm._v(
+                                            "\n                                        " +
+                                              _vm._s(
+                                                _vm.$page.errors.about_us[0]
+                                              ) +
+                                              "\n                                    "
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "mb-4" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass:
+                                        "block text-gray-700 text-sm font-bold mb-2",
+                                      attrs: { for: "exampleFormControlInput1" }
+                                    },
+                                    [_vm._v("Email:")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("input", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.form.email,
+                                        expression: "form.email"
+                                      }
+                                    ],
+                                    staticClass:
+                                      "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                    attrs: {
+                                      type: "text",
+                                      id: "exampleFormControlInput1",
+                                      placeholder: "Masukan email"
+                                    },
+                                    domProps: { value: _vm.form.email },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.form,
+                                          "email",
+                                          $event.target.value
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm.$page.errors.email
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "text-red-500" },
+                                        [
+                                          _vm._v(
+                                            "\n                                        " +
+                                              _vm._s(
+                                                _vm.$page.errors.email[0]
+                                              ) +
+                                              "\n                                    "
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "mb-4" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass:
+                                        "block text-gray-700 text-sm font-bold mb-2",
+                                      attrs: { for: "exampleFormControlInput2" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Design, Visual, dan\n                                        Communication:"
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("textarea", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.form.d1,
+                                        expression: "form.d1"
+                                      }
+                                    ],
+                                    staticClass:
+                                      "shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                    attrs: {
+                                      rows: "4",
+                                      id: "exampleFormControlInput2",
+                                      placeholder: "Masukan penjelasan"
+                                    },
+                                    domProps: { value: _vm.form.d1 },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.form,
+                                          "d1",
+                                          $event.target.value
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm.$page.errors.d1
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "text-red-500" },
+                                        [
+                                          _vm._v(
+                                            "\n                                        " +
+                                              _vm._s(_vm.$page.errors.d1[0]) +
+                                              "\n                                    "
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "mb-4" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass:
+                                        "block text-gray-700 text-sm font-bold mb-2",
+                                      attrs: { for: "exampleFormControlInput2" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Branding, Marketing dan Business\n                                        Consultant:"
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("textarea", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.form.d2,
+                                        expression: "form.d2"
+                                      }
+                                    ],
+                                    staticClass:
+                                      "shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                    attrs: {
+                                      rows: "4",
+                                      id: "exampleFormControlInput2",
+                                      placeholder: "Masukan penjelasan"
+                                    },
+                                    domProps: { value: _vm.form.d2 },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.form,
+                                          "d2",
+                                          $event.target.value
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm.$page.errors.d2
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "text-red-500" },
+                                        [
+                                          _vm._v(
+                                            "\n                                        " +
+                                              _vm._s(_vm.$page.errors.d2[0]) +
+                                              "\n                                    "
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "mb-4" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass:
+                                        "block text-gray-700 text-sm font-bold mb-2",
+                                      attrs: { for: "exampleFormControlInput2" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Riset dan Konsultan\n                                        Penelitian:"
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("textarea", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.form.d3,
+                                        expression: "form.d3"
+                                      }
+                                    ],
+                                    staticClass:
+                                      "shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                    attrs: {
+                                      rows: "4",
+                                      id: "exampleFormControlInput2",
+                                      placeholder: "Masukan penjelasan"
+                                    },
+                                    domProps: { value: _vm.form.d3 },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.form,
+                                          "d3",
+                                          $event.target.value
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm.$page.errors.d3
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "text-red-500" },
+                                        [
+                                          _vm._v(
+                                            "\n                                        " +
+                                              _vm._s(_vm.$page.errors.d3[0]) +
+                                              "\n                                    "
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "mb-4" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass:
+                                        "block text-gray-700 text-sm font-bold mb-2",
+                                      attrs: { for: "exampleFormControlInput2" }
+                                    },
+                                    [_vm._v("Software Development:")]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("textarea", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.form.d4,
+                                        expression: "form.d4"
+                                      }
+                                    ],
+                                    staticClass:
+                                      "shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                    attrs: {
+                                      rows: "4",
+                                      id: "exampleFormControlInput2",
+                                      placeholder: "Masukan Body"
+                                    },
+                                    domProps: { value: _vm.form.d4 },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.form,
+                                          "d4",
+                                          $event.target.value
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm.$page.errors.d4
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "text-red-500" },
+                                        [
+                                          _vm._v(
+                                            "\n                                        " +
+                                              _vm._s(_vm.$page.errors.d4[0]) +
+                                              "\n                                    "
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "mb-4" }, [
+                                  _c(
+                                    "label",
+                                    {
+                                      staticClass:
+                                        "block text-gray-700 text-sm font-bold mb-2",
+                                      attrs: { for: "exampleFormControlInput2" }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "Leadership, Problem Solving, dan\n                                        Public Speaking:"
+                                      )
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("textarea", {
+                                    directives: [
+                                      {
+                                        name: "model",
+                                        rawName: "v-model",
+                                        value: _vm.form.d5,
+                                        expression: "form.d5"
+                                      }
+                                    ],
+                                    staticClass:
+                                      "shadow appearance-none border rounded w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                    attrs: {
+                                      rows: "4",
+                                      id: "exampleFormControlInput2",
+                                      placeholder: "Masukan Body"
+                                    },
+                                    domProps: { value: _vm.form.d5 },
+                                    on: {
+                                      input: function($event) {
+                                        if ($event.target.composing) {
+                                          return
+                                        }
+                                        _vm.$set(
+                                          _vm.form,
+                                          "d5",
+                                          $event.target.value
+                                        )
+                                      }
+                                    }
+                                  }),
+                                  _vm._v(" "),
+                                  _vm.$page.errors.d5
+                                    ? _c(
+                                        "div",
+                                        { staticClass: "text-red-500" },
+                                        [
+                                          _vm._v(
+                                            "\n                                        " +
+                                              _vm._s(_vm.$page.errors.d5[0]) +
+                                              "\n                                    "
+                                          )
+                                        ]
+                                      )
+                                    : _vm._e()
+                                ])
+                              ])
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse"
+                            },
+                            [
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto"
+                                },
+                                [
+                                  _c(
+                                    "button",
+                                    {
+                                      directives: [
+                                        {
+                                          name: "show",
+                                          rawName: "v-show",
+                                          value: !_vm.editMode,
+                                          expression: "!editMode"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5",
+                                      attrs: {
+                                        "wire:click.prevent": "store()",
+                                        type: "button"
+                                      },
+                                      on: {
+                                        click: function($event) {
+                                          return _vm.save(_vm.form)
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                    Save\n                                "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto"
+                                },
+                                [
+                                  _c(
+                                    "button",
+                                    {
+                                      directives: [
+                                        {
+                                          name: "show",
+                                          rawName: "v-show",
+                                          value: _vm.editMode,
+                                          expression: "editMode"
+                                        }
+                                      ],
+                                      staticClass:
+                                        "inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5",
+                                      attrs: {
+                                        "wire:click.prevent": "store()",
+                                        type: "button"
+                                      },
+                                      on: {
+                                        click: function($event) {
+                                          return _vm.update(_vm.form)
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                    Update\n                                "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "span",
+                                {
+                                  staticClass:
+                                    "mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto"
+                                },
+                                [
+                                  _c(
+                                    "button",
+                                    {
+                                      staticClass:
+                                        "inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5",
+                                      attrs: { type: "button" },
+                                      on: {
+                                        click: function($event) {
+                                          return _vm.closeModal()
+                                        }
+                                      }
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                    Cancel\n                                "
+                                      )
+                                    ]
+                                  )
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ]
+                    )
+                  ]
+                )
+              ]
+            )
+          : _vm._e()
       ])
     ]
   )
@@ -29829,6 +31811,553 @@ var render = function() {
       true
     )
   })
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/maleo-profile.vue?vue&type=template&id=8fc8adb6&":
+/*!***********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/Pages/maleo-profile.vue?vue&type=template&id=8fc8adb6& ***!
+  \***********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "app-layout",
+    {
+      scopedSlots: _vm._u([
+        {
+          key: "header",
+          fn: function() {
+            return [
+              _c(
+                "h2",
+                {
+                  staticClass:
+                    "font-semibold text-xl text-gray-800 leading-tight"
+                },
+                [
+                  _vm._v(
+                    "\n            Manage Post - (Laravel 8 Inertia JS CRUD with Jetstream \n            Tailwind CSS - ItSolutionStuff.com)\n        "
+                  )
+                ]
+              )
+            ]
+          },
+          proxy: true
+        }
+      ])
+    },
+    [
+      _vm._v(" "),
+      _c("div", { staticClass: "py-12" }, [
+        _c("div", { staticClass: "max-w-7xl mx-auto sm:px-6 lg:px-8" }, [
+          _c(
+            "div",
+            {
+              staticClass:
+                "bg-white overflow-hidden shadow-xl sm:rounded-lg px-4 py-4"
+            },
+            [
+              _vm.$page.flash.message
+                ? _c(
+                    "div",
+                    {
+                      staticClass:
+                        "bg-teal-100 border-t-4 border-teal-500 rounded-b text-teal-900 px-4 py-3 shadow-md my-3",
+                      attrs: { role: "alert" }
+                    },
+                    [
+                      _c("div", { staticClass: "flex" }, [
+                        _c("div", [
+                          _c("p", { staticClass: "text-sm" }, [
+                            _vm._v(_vm._s(_vm.$page.flash.message))
+                          ])
+                        ])
+                      ])
+                    ]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass:
+                    "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded my-3",
+                  on: {
+                    click: function($event) {
+                      return _vm.openModal()
+                    }
+                  }
+                },
+                [_vm._v("\n                    Edit profil \n                ")]
+              ),
+              _vm._v(" "),
+              _c("table", { staticClass: "table-fixed w-full" }, [
+                _c("thead", [
+                  _c("tr", { staticClass: "bg-gray-100" }, [
+                    _c("th", { staticClass: "px-4 py-2 w-20" }, [
+                      _vm._v("No.")
+                    ]),
+                    _vm._v(" "),
+                    _c("th", { staticClass: "px-4 py-2" }, [_vm._v("Title")]),
+                    _vm._v(" "),
+                    _c("th", { staticClass: "px-4 py-2" }, [_vm._v("Body")]),
+                    _vm._v(" "),
+                    _c("th", { staticClass: "px-4 py-2" }, [_vm._v("Action")])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "tbody",
+                  _vm._l(_vm.data, function(row) {
+                    return _c("tr", { key: row.id }, [
+                      _c("td", { staticClass: "border px-4 py-2" }, [
+                        _vm._v(_vm._s(row.id))
+                      ]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "border px-4 py-2" }, [
+                        _vm._v(
+                          "\n                                " +
+                            _vm._s(row.title) +
+                            "\n                            "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "border px-4 py-2" }, [
+                        _vm._v(_vm._s(row.body))
+                      ]),
+                      _vm._v(" "),
+                      _c("td", { staticClass: "border px-4 py-2" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass:
+                              "bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded",
+                            on: {
+                              click: function($event) {
+                                return _vm.edit(row)
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                    Edit\n                                "
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass:
+                              "bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded",
+                            on: {
+                              click: function($event) {
+                                return _vm.deleteRow(row)
+                              }
+                            }
+                          },
+                          [
+                            _vm._v(
+                              "\n                                    Delete\n                                "
+                            )
+                          ]
+                        )
+                      ])
+                    ])
+                  }),
+                  0
+                )
+              ]),
+              _vm._v(" "),
+              _vm.isOpen
+                ? _c(
+                    "div",
+                    {
+                      staticClass:
+                        "fixed z-10 inset-0 overflow-y-auto ease-out duration-400"
+                    },
+                    [
+                      _c(
+                        "div",
+                        {
+                          staticClass:
+                            "flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center sm:block sm:p-0"
+                        },
+                        [
+                          _c(
+                            "div",
+                            { staticClass: "fixed inset-0 transition-opacity" },
+                            [
+                              _c("div", {
+                                staticClass:
+                                  "absolute inset-0 bg-gray-500 opacity-75"
+                              })
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c("span", {
+                            staticClass:
+                              "hidden sm:inline-block sm:align-middle sm:h-screen"
+                          }),
+                          _vm._v("​\n                        "),
+                          _c(
+                            "div",
+                            {
+                              staticClass:
+                                "inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full",
+                              attrs: {
+                                role: "dialog",
+                                "aria-modal": "true",
+                                "aria-labelledby": "modal-headline"
+                              }
+                            },
+                            [
+                              _c("form", [
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4"
+                                  },
+                                  [
+                                    _c("div", {}, [
+                                      _c("div", { staticClass: "mb-4" }, [
+                                        _c(
+                                          "label",
+                                          {
+                                            staticClass:
+                                              "block text-gray-700 text-sm font-bold mb-2",
+                                            attrs: {
+                                              for: "exampleFormControlInput1"
+                                            }
+                                          },
+                                          [_vm._v("Title:")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("input", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.form.title,
+                                              expression: "form.title"
+                                            }
+                                          ],
+                                          staticClass:
+                                            "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                          attrs: {
+                                            type: "text",
+                                            id: "exampleFormControlInput1",
+                                            placeholder: "Enter Title"
+                                          },
+                                          domProps: { value: _vm.form.title },
+                                          on: {
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                _vm.form,
+                                                "title",
+                                                $event.target.value
+                                              )
+                                            }
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _vm.$page.errors.title
+                                          ? _c(
+                                              "div",
+                                              { staticClass: "text-red-500" },
+                                              [
+                                                _vm._v(
+                                                  "\n                                                " +
+                                                    _vm._s(
+                                                      _vm.$page.errors.title[0]
+                                                    ) +
+                                                    "\n                                            "
+                                                )
+                                              ]
+                                            )
+                                          : _vm._e()
+                                      ]),
+                                      _vm._v(" "),
+                                      _c("div", { staticClass: "mb-4" }, [
+                                        _c(
+                                          "label",
+                                          {
+                                            staticClass:
+                                              "block text-gray-700 text-sm font-bold mb-2",
+                                            attrs: {
+                                              for: "exampleFormControlInput2"
+                                            }
+                                          },
+                                          [_vm._v("Body:")]
+                                        ),
+                                        _vm._v(" "),
+                                        _c("textarea", {
+                                          directives: [
+                                            {
+                                              name: "model",
+                                              rawName: "v-model",
+                                              value: _vm.form.body,
+                                              expression: "form.body"
+                                            }
+                                          ],
+                                          staticClass:
+                                            "shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline",
+                                          attrs: {
+                                            id: "exampleFormControlInput2",
+                                            placeholder: "Enter Body"
+                                          },
+                                          domProps: { value: _vm.form.body },
+                                          on: {
+                                            input: function($event) {
+                                              if ($event.target.composing) {
+                                                return
+                                              }
+                                              _vm.$set(
+                                                _vm.form,
+                                                "body",
+                                                $event.target.value
+                                              )
+                                            }
+                                          }
+                                        }),
+                                        _vm._v(" "),
+                                        _vm.$page.errors.body
+                                          ? _c(
+                                              "div",
+                                              { staticClass: "text-red-500" },
+                                              [
+                                                _vm._v(
+                                                  "\n                                                " +
+                                                    _vm._s(
+                                                      _vm.$page.errors.body[0]
+                                                    ) +
+                                                    "\n                                            "
+                                                )
+                                              ]
+                                            )
+                                          : _vm._e()
+                                      ])
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  {
+                                    staticClass:
+                                      "bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse"
+                                  },
+                                  [
+                                    _c(
+                                      "span",
+                                      {
+                                        staticClass:
+                                          "flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto"
+                                      },
+                                      [
+                                        _c(
+                                          "button",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value: !_vm.editMode,
+                                                expression: "!editMode"
+                                              }
+                                            ],
+                                            staticClass:
+                                              "inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5",
+                                            attrs: {
+                                              "wire:click.prevent": "store()",
+                                              type: "button"
+                                            },
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.save(_vm.form)
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                            Save\n                                        "
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      {
+                                        staticClass:
+                                          "flex w-full rounded-md shadow-sm sm:ml-3 sm:w-auto"
+                                      },
+                                      [
+                                        _c(
+                                          "button",
+                                          {
+                                            directives: [
+                                              {
+                                                name: "show",
+                                                rawName: "v-show",
+                                                value: _vm.editMode,
+                                                expression: "editMode"
+                                              }
+                                            ],
+                                            staticClass:
+                                              "inline-flex justify-center w-full rounded-md border border-transparent px-4 py-2 bg-green-600 text-base leading-6 font-medium text-white shadow-sm hover:bg-green-500 focus:outline-none focus:border-green-700 focus:shadow-outline-green transition ease-in-out duration-150 sm:text-sm sm:leading-5",
+                                            attrs: {
+                                              "wire:click.prevent": "store()",
+                                              type: "button"
+                                            },
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.update(_vm.form)
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                            Update\n                                        "
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "span",
+                                      {
+                                        staticClass:
+                                          "mt-3 flex w-full rounded-md shadow-sm sm:mt-0 sm:w-auto"
+                                      },
+                                      [
+                                        _c(
+                                          "button",
+                                          {
+                                            staticClass:
+                                              "inline-flex justify-center w-full rounded-md border border-gray-300 px-4 py-2 bg-white text-base leading-6 font-medium text-gray-700 shadow-sm hover:text-gray-500 focus:outline-none focus:border-blue-300 focus:shadow-outline-blue transition ease-in-out duration-150 sm:text-sm sm:leading-5",
+                                            attrs: { type: "button" },
+                                            on: {
+                                              click: function($event) {
+                                                return _vm.closeModal()
+                                              }
+                                            }
+                                          },
+                                          [
+                                            _vm._v(
+                                              "\n                                            Cancel\n                                        "
+                                            )
+                                          ]
+                                        )
+                                      ]
+                                    )
+                                  ]
+                                )
+                              ])
+                            ]
+                          )
+                        ]
+                      )
+                    ]
+                  )
+                : _vm._e()
+            ]
+          )
+        ])
+      ])
+    ]
+  )
+}
+var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/maleo/MaleoIcon.vue?vue&type=template&id=767236a0&":
+/*!*******************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/maleo/MaleoIcon.vue?vue&type=template&id=767236a0& ***!
+  \*******************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "svg",
+    {
+      attrs: {
+        version: "1.0",
+        xmlns: "http://www.w3.org/2000/svg",
+        width: "1000.000000pt",
+        height: "1000.000000pt",
+        viewBox: "0 0 1000.000000 1000.000000",
+        preserveAspectRatio: "xMidYMid meet"
+      }
+    },
+    [
+      _c(
+        "g",
+        {
+          attrs: {
+            transform:
+              "translate(0.000000,1000.000000) scale(0.100000,-0.100000)",
+            fill: "#000000",
+            stroke: "none"
+          }
+        },
+        [
+          _c("path", {
+            attrs: {
+              d:
+                "M4595 9809 c-467 -41 -952 -154 -1380 -324 -151 -59 -466 -212 -610\n-294 -373 -213 -705 -469 -1020 -785 -400 -401 -684 -801 -931 -1311 -214\n-444 -349 -877 -424 -1365 -39 -254 -45 -359 -45 -730 0 -371 6 -476 45 -730\n75 -488 210 -921 424 -1365 247 -510 531 -910 931 -1311 403 -404 807 -691\n1320 -940 543 -262 1093 -412 1710 -464 155 -13 615 -13 770 0 390 33 766 109\n1118 224 224 74 370 133 592 240 513 248 912 532 1315 936 404 403 688 802\n936 1315 262 543 412 1093 464 1710 13 155 13 615 0 770 -33 390 -109 766\n-224 1118 -74 224 -133 370 -240 592 -247 510 -531 910 -931 1311 -403 404\n-807 691 -1320 940 -543 262 -1093 412 -1710 464 -142 12 -647 11 -790 -1z\nm-20 -1093 c336 -41 640 -116 940 -233 173 -67 466 -220 635 -331 848 -557\n1390 -1402 1526 -2377 17 -123 34 -475 23 -475 -4 0 -37 30 -75 68 -70 68\n-220 188 -271 216 -15 9 -55 36 -88 60 -95 70 -273 180 -360 224 -44 21 -152\n63 -240 92 -230 76 -206 62 -556 330 -68 52 -158 120 -200 150 -42 30 -125 93\n-183 140 -59 47 -131 103 -160 125 -48 37 -100 79 -357 290 -334 274 -542 425\n-648 472 -83 37 -260 79 -392 94 -144 15 -243 4 -432 -48 -169 -46 -199 -60\n-332 -161 -119 -90 -190 -168 -298 -329 -73 -109 -105 -180 -148 -326 -54\n-180 -62 -232 -63 -397 0 -165 7 -214 54 -371 27 -89 34 -99 87 -150 84 -80\n181 -134 288 -160 125 -30 150 -43 181 -88 41 -63 33 -75 -61 -82 -96 -8 -112\n-14 -218 -80 -167 -105 -188 -120 -181 -130 3 -6 12 -8 20 -5 15 6 74 -12 74\n-23 0 -9 -49 -54 -135 -124 -92 -73 -225 -202 -225 -217 0 -8 13 -10 43 -5\nl42 6 -63 -58 c-35 -32 -61 -61 -58 -64 3 -3 35 -1 71 4 36 5 69 7 72 3 3 -3\n-14 -36 -39 -73 -152 -229 -259 -394 -264 -407 -7 -18 9 -21 37 -6 34 19 22\n-12 -50 -123 -49 -74 -110 -147 -204 -244 -167 -172 -211 -222 -204 -229 3 -4\n23 7 44 23 68 54 143 81 143 53 0 -20 -73 -156 -111 -207 -21 -29 -35 -54 -31\n-56 4 -3 34 -8 67 -12 33 -4 70 -13 82 -21 34 -21 56 -104 51 -190 -4 -64 -12\n-87 -58 -179 -30 -57 -51 -108 -47 -112 13 -13 52 15 92 65 22 28 43 51 46 52\n18 1 14 -102 -6 -198 -12 -52 11 -38 40 25 15 32 29 52 32 45 7 -19 -26 -148\n-59 -226 -16 -37 -27 -71 -23 -74 3 -3 33 24 67 61 33 38 62 66 64 64 2 -2 -2\n-17 -10 -33 -33 -69 -127 -307 -122 -311 3 -3 34 20 69 51 35 31 67 56 70 56\n3 0 7 -33 9 -72 l3 -73 59 123 c33 67 64 121 70 119 21 -7 35 -53 55 -192 28\n-180 27 -235 -2 -235 -17 0 -185 80 -322 153 -397 213 -757 512 -1051 872\n-412 503 -653 1083 -736 1770 -18 148 -15 522 6 685 40 323 131 666 247 932\n402 923 1182 1622 2158 1932 285 91 525 137 891 170 96 8 501 -3 625 -18z\nm1520 -2834 c324 -66 552 -240 682 -522 40 -85 73 -230 73 -317 0 -86 -31\n-209 -73 -288 -37 -69 -144 -181 -202 -210 -21 -11 -71 -38 -110 -61 -261\n-150 -358 -152 -705 -14 -187 75 -259 89 -375 72 -204 -30 -371 -113 -654\n-325 -212 -160 -390 -219 -531 -178 -75 22 -160 81 -217 151 -146 179 -155\n264 -49 465 88 165 121 210 241 330 108 108 191 185 488 453 113 103 345 259\n452 305 282 122 344 144 455 161 14 2 115 2 225 1 151 -2 224 -8 300 -23z\nm850 -2112 c166 -28 315 -66 315 -79 0 -30 -219 -350 -330 -481 -169 -202\n-427 -441 -638 -594 -159 -115 -140 -109 -233 -69 -44 19 -132 48 -195 63\n-115 29 -244 81 -244 98 0 6 35 18 77 29 117 28 107 43 -29 43 -136 0 -175 14\n-236 86 -45 52 -53 75 -24 68 16 -4 72 38 72 54 0 5 -15 14 -34 20 -44 16\n-146 94 -168 129 -15 24 -15 30 -2 62 16 39 141 171 161 171 7 0 13 -11 13\n-25 0 -32 20 -32 51 1 52 57 220 163 257 164 27 0 28 -15 2 -58 -40 -66 -18\n-71 30 -7 19 25 40 45 48 45 8 0 23 11 34 25 11 14 40 37 64 51 43 26 45 26\n59 8 13 -18 15 -18 44 10 24 23 31 26 31 13 0 -21 14 -22 30 -2 7 9 19 14 26\n11 8 -3 18 4 24 14 6 11 15 20 21 20 6 0 6 -7 -1 -19 -18 -34 7 -33 36 1 15\n18 31 32 36 30 5 -1 24 9 42 23 18 14 41 25 51 25 10 0 46 16 81 35 64 36 87\n44 66 23 -7 -7 -12 -18 -12 -25 0 -9 14 -6 49 11 31 16 52 21 58 15 6 -6 25\n-2 54 10 58 27 158 27 314 1z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M5666 5609 c-66 -11 -172 -66 -202 -104 -35 -46 -74 -158 -74 -213 0\n-85 17 -122 86 -190 128 -126 321 -169 514 -115 30 8 61 20 68 25 7 6 25 12\n40 13 57 5 182 88 182 123 0 17 -61 131 -94 175 -49 66 -159 189 -192 213 -42\n33 -195 84 -244 83 -19 -1 -57 -5 -84 -10z"
+            }
+          }),
+          _vm._v(" "),
+          _c("path", {
+            attrs: {
+              d:
+                "M4187 4584 c-17 -17 38 -183 83 -253 59 -91 130 -113 130 -40 0 56\n-37 126 -111 213 -70 81 -87 95 -102 80z"
+            }
+          })
+        ]
+      )
+    ]
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -43570,7 +46099,9 @@ var map = {
 	"./Teams/TeamMemberManager": "./resources/js/Pages/Teams/TeamMemberManager.vue",
 	"./Teams/TeamMemberManager.vue": "./resources/js/Pages/Teams/TeamMemberManager.vue",
 	"./Teams/UpdateTeamNameForm": "./resources/js/Pages/Teams/UpdateTeamNameForm.vue",
-	"./Teams/UpdateTeamNameForm.vue": "./resources/js/Pages/Teams/UpdateTeamNameForm.vue"
+	"./Teams/UpdateTeamNameForm.vue": "./resources/js/Pages/Teams/UpdateTeamNameForm.vue",
+	"./maleo-profile": "./resources/js/Pages/maleo-profile.vue",
+	"./maleo-profile.vue": "./resources/js/Pages/maleo-profile.vue"
 };
 
 
@@ -44630,6 +47161,75 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/js/Pages/maleo-profile.vue":
+/*!**********************************************!*\
+  !*** ./resources/js/Pages/maleo-profile.vue ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _maleo_profile_vue_vue_type_template_id_8fc8adb6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./maleo-profile.vue?vue&type=template&id=8fc8adb6& */ "./resources/js/Pages/maleo-profile.vue?vue&type=template&id=8fc8adb6&");
+/* harmony import */ var _maleo_profile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./maleo-profile.vue?vue&type=script&lang=js& */ "./resources/js/Pages/maleo-profile.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _maleo_profile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _maleo_profile_vue_vue_type_template_id_8fc8adb6___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _maleo_profile_vue_vue_type_template_id_8fc8adb6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/Pages/maleo-profile.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/Pages/maleo-profile.vue?vue&type=script&lang=js&":
+/*!***********************************************************************!*\
+  !*** ./resources/js/Pages/maleo-profile.vue?vue&type=script&lang=js& ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_maleo_profile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./maleo-profile.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/maleo-profile.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_maleo_profile_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/Pages/maleo-profile.vue?vue&type=template&id=8fc8adb6&":
+/*!*****************************************************************************!*\
+  !*** ./resources/js/Pages/maleo-profile.vue?vue&type=template&id=8fc8adb6& ***!
+  \*****************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_maleo_profile_vue_vue_type_template_id_8fc8adb6___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./maleo-profile.vue?vue&type=template&id=8fc8adb6& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/Pages/maleo-profile.vue?vue&type=template&id=8fc8adb6&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_maleo_profile_vue_vue_type_template_id_8fc8adb6___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_maleo_profile_vue_vue_type_template_id_8fc8adb6___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
 /***/ "./resources/js/app.js":
 /*!*****************************!*\
   !*** ./resources/js/app.js ***!
@@ -44706,6 +47306,59 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     forceTLS: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/maleo/MaleoIcon.vue":
+/*!******************************************!*\
+  !*** ./resources/js/maleo/MaleoIcon.vue ***!
+  \******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _MaleoIcon_vue_vue_type_template_id_767236a0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MaleoIcon.vue?vue&type=template&id=767236a0& */ "./resources/js/maleo/MaleoIcon.vue?vue&type=template&id=767236a0&");
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+var script = {}
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
+  script,
+  _MaleoIcon_vue_vue_type_template_id_767236a0___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _MaleoIcon_vue_vue_type_template_id_767236a0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/maleo/MaleoIcon.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/maleo/MaleoIcon.vue?vue&type=template&id=767236a0&":
+/*!*************************************************************************!*\
+  !*** ./resources/js/maleo/MaleoIcon.vue?vue&type=template&id=767236a0& ***!
+  \*************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MaleoIcon_vue_vue_type_template_id_767236a0___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./MaleoIcon.vue?vue&type=template&id=767236a0& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/maleo/MaleoIcon.vue?vue&type=template&id=767236a0&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MaleoIcon_vue_vue_type_template_id_767236a0___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MaleoIcon_vue_vue_type_template_id_767236a0___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 

@@ -8,7 +8,7 @@
                         <!-- Logo -->
                         <div class="flex-shrink-0 flex items-center">
                             <inertia-link :href="route('dashboard')">
-                                <jet-application-mark class="block h-9 w-auto" />
+                                <img src="assets/img/maleo-icon.png" alt="" class="block h-9 w-auto">
                             </inertia-link>
                         </div>
 
@@ -16,6 +16,9 @@
                         <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                             <jet-nav-link :href="route('dashboard')" :active="$page.currentRouteName == 'dashboard'">
                                 Dashboard
+                            </jet-nav-link>
+                            <jet-nav-link :href="route('maleo-profile')" :active="$page.currentRouteName == 'maleo-profile'">
+                                Maleo Profile
                             </jet-nav-link>
                         </div>
                     </div>
@@ -79,7 +82,7 @@
                                         </div>
 
                                         <template v-for="team in $page.user.all_teams">
-                                            <form @submit.prevent="switchToTeam(team)">
+                                            <form @submit.prevent="switchToTeam(team)" >
                                                 <jet-dropdown-link as="button">
                                                     <div class="flex items-center">
                                                         <svg v-if="team.id == $page.user.current_team_id" class="mr-2 h-5 w-5 text-green-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -177,7 +180,7 @@
                             </div>
 
                             <template v-for="team in $page.user.all_teams">
-                                <form @submit.prevent="switchToTeam(team)" :key="team.id">
+                                <form @submit.prevent="switchToTeam(team)" >
                                     <jet-responsive-nav-link as="button">
                                         <div class="flex items-center">
                                             <svg v-if="team.id == $page.user.current_team_id" class="mr-2 h-5 w-5 text-green-400" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
@@ -213,6 +216,7 @@
 <script>
     import JetApplicationLogo from './../Jetstream/ApplicationLogo'
     import JetApplicationMark from './../Jetstream/ApplicationMark'
+    import MaleoIcon  from './../maleo/MaleoIcon'
     import JetDropdown from './../Jetstream/Dropdown'
     import JetDropdownLink from './../Jetstream/DropdownLink'
     import JetNavLink from './../Jetstream/NavLink'
@@ -226,6 +230,7 @@
             JetDropdownLink,
             JetNavLink,
             JetResponsiveNavLink,
+            MaleoIcon
         },
 
         data() {

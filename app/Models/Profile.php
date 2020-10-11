@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Profile extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'tag_line', 'about_us','alamat','handphone','email','ig','fb'
+    ];
 }

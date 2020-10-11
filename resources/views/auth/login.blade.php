@@ -1,7 +1,8 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <img src="assets/img/maleo-icon.png" alt="maleo-icon.png" class="block h-16 w-auto">
+
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
