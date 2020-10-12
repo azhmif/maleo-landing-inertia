@@ -3992,12 +3992,11 @@ __webpack_require__.r(__webpack_exports__);
     },
     update: function update(data) {
       data._method = "PATCH";
+      this.$inertia.post("/maleo-profile/update/" + data.id, data);
+      console.log(this.$inertia.page.props.flash.message); // if(this.$inertia.page.props.flash.message!=null){
 
-      if (this.$inertia.post("/maleo-profile/update/" + data.id, data)) {
-        console.log(this.$inertia.page);
-        this.reset();
-        this.closeModal();
-      }
+      console.log(this.$inertia.page);
+      this.closeModal(); // }
     },
     deleteRow: function deleteRow(data) {
       if (!confirm("Are you sure want to remove?")) return;

@@ -565,11 +565,12 @@ export default {
         },
         update: function(data) {
             data._method = "PATCH";
-            if (this.$inertia.post("/maleo-profile/update/" + data.id, data)) {
-                console.log(this.$inertia.page);
-                this.reset();
+            this.$inertia.post("/maleo-profile/update/" + data.id, data)
+            console.log(this.$inertia.page.props.flash.message);
+            // if(this.$inertia.page.props.flash.message!=null){
+                console.log(this.$inertia.page) ;
                 this.closeModal();
-            }
+            // }
         },
         deleteRow: function(data) {
             if (!confirm("Are you sure want to remove?")) return;
