@@ -9,6 +9,8 @@ use App\Models\Profile;
 use App\Models\FAQ;
 use App\Models\WhyUs;
 use App\Models\Kontak;
+use App\Models\MemberArea;
+
 use Session;
 
 class WelcomeController extends Controller
@@ -40,10 +42,10 @@ class WelcomeController extends Controller
 
         return view ('member-area', ['data' => $data]);
     }
-    public function memberAreaStore(){
-        kontak::create($request->all());
+    public function memberAreaStore(Request $request){
+        MemberArea::create($request->all());
   
-        return redirect('/member-area')->with('success', 'Berhasil Mendaftar, Admin kami akan menghubungi anda via phone/whatsapp.');
+        return redirect('/member-area')->with('success', 'Berhasil Mendaftar, Admin kami akan menghubungi anda via phone/whatsapp. Terimakasih');
     }
     
     

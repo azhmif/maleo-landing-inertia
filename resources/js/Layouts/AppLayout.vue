@@ -27,7 +27,10 @@
                                Why us
                             </jet-nav-link>
                              <jet-nav-link :href="route('kontak-panel')" :active="$page.currentRouteName == 'kontak'">
-                                 kontak
+                                 Kontak
+                            </jet-nav-link>
+                             <jet-nav-link :href="route('admin.member-area')" :active="$page.currentRouteName == 'admin.member-area'">
+                                 Member
                             </jet-nav-link>
                         </div>
                     </div>
