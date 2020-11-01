@@ -8,7 +8,7 @@
                         <!-- Logo -->
                         <div class="flex-shrink-0 flex items-center">
                             <inertia-link :href="route('dashboard')">
-                                <img src="assets/img/maleo-icon.png" alt="" class="block h-9 w-auto">
+                                <img src="/assets/img/maleo-icon.png" alt="" class="block h-9 w-auto">
                             </inertia-link>
                         </div>
 
@@ -17,8 +17,17 @@
                             <jet-nav-link :href="route('dashboard')" :active="$page.currentRouteName == 'dashboard'">
                                 Dashboard
                             </jet-nav-link>
-                            <jet-nav-link :href="route('maleo-profile')" :active="$page.currentRouteName == 'maleo-profile'">
-                                Maleo Profile
+                            <jet-nav-link :href="route('portofolio')" :active="$page.currentRouteName == 'portofolio'">
+                                Maleo Portofolio
+                            </jet-nav-link>
+                             <jet-nav-link :href="route('faq')" :active="$page.currentRouteName == 'faq'">
+                               FAQ
+                            </jet-nav-link>
+                             <jet-nav-link :href="route('kenapa-kami')" :active="$page.currentRouteName == 'kenapa-kami'">
+                               Why us
+                            </jet-nav-link>
+                             <jet-nav-link :href="route('kontak-panel')" :active="$page.currentRouteName == 'kontak'">
+                                 kontak
                             </jet-nav-link>
                         </div>
                     </div>
@@ -221,6 +230,7 @@
     import JetDropdownLink from './../Jetstream/DropdownLink'
     import JetNavLink from './../Jetstream/NavLink'
     import JetResponsiveNavLink from './../Jetstream/ResponsiveNavLink'
+
 
     export default {
         components: {

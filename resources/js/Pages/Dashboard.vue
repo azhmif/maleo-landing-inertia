@@ -269,8 +269,11 @@
                         aria-labelledby="modal-headline"
                     >
                         <form>
+                             <!-- {{ csrf_field() }} -->
                             <div class="bg-white px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
                                 <div class="">
+                                    
+
                                     <div class="mb-4">
                                         <label
                                             for="exampleFormControlInput1"
@@ -511,14 +514,20 @@
 <script>
 import AppLayout from "./../Layouts/AppLayout";
 // import Welcome from "./../Jetstream/Welcome";
+import vue2Dropzone from "vue2-dropzone";
+import "vue2-dropzone/dist/vue2Dropzone.min.css";
 
 export default {
     components: {
-        AppLayout
+        AppLayout,
+        vueDropzone: vue2Dropzone
+
         // Welcome
     },
+
     props: ["data", "errors"],
     data() {
+        console.log( document.head.querySelector('[Cookie="XSRF-TOKEN"]'))
         return {
             editMode: false,
             isOpen: false,
@@ -534,10 +543,24 @@ export default {
                 d3: null,
                 d4: null,
                 d5: null
+            },
+            dropzoneOptions: {
+                url: "http://127.0.0.1:8000/dropzone/store/test",
+                thumbnailWidth: 150,
+                maxFilesize: 0.5,
+                maxFiles: 1,
+                addRemoveLinks: true,
+                 headers : {
+                        'X-XSRF-TOKEN': document.head.querySelector('[name="XSRF-TOKEN"]')
+                    }
             }
         };
     },
     methods: {
+        uploadSuccess: function(file, response) {
+            console.log(file)
+            console.log(response)
+        },
         openModal: function() {
             this.isOpen = true;
         },
@@ -565,11 +588,11 @@ export default {
         },
         update: function(data) {
             data._method = "PATCH";
-            this.$inertia.post("/maleo-profile/update/" + data.id, data)
+            this.$inertia.post("/maleo-profile/update/" + data.id, data);
             console.log(this.$inertia.page.props.flash.message);
             // if(this.$inertia.page.props.flash.message!=null){
-                console.log(this.$inertia.page) ;
-                this.closeModal();
+            console.log(this.$inertia.page);
+            this.closeModal();
             // }
         },
         deleteRow: function(data) {

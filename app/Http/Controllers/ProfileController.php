@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 use Inertia\Inertia;
 use App\Models\Profile;
+use App\Models\Portofolio;
+
 use Illuminate\Support\Facades\Validator;
 class ProfileController extends Controller
 {
@@ -21,6 +23,13 @@ class ProfileController extends Controller
         $data = Profile::all();
         // dd($data);die;
         return Inertia::render('maleo-profile', ['data' => $data]);
+    }
+    public function indexPortofolio()
+    {
+        //
+        $data = Portofolio::all();
+        // dd($data);die;
+        return Inertia::render('Portofolio', ['data' => $data]);
     }
 
     /**
