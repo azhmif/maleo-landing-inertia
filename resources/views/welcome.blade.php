@@ -53,7 +53,7 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="#">Beranda</a></li>
+          <li class="active"><a href="#">Berandaaaa</a></li>
           <li><a href="#about">Tentang Kami</a></li>
           <li><a href="#services">Layanan</a></li>
           <!-- <li><a href="#portfolio">Portfolio</a></li>
