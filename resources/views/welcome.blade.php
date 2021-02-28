@@ -6,7 +6,7 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
   <title>Maleo Project</title>
- <meta content="Maleo Project adalah platform digital yang bertujuan untuk mengakselerasi meningkatkan skill secara personal, scale up bisnis berbasis riset, teknologi dan komunitas." name="description">
+  <meta content="Maleo Project adalah platform digital yang bertujuan untuk mengakselerasi meningkatkan skill secara personal, scale up bisnis berbasis riset, teknologi dan komunitas." name="description">
   <meta content="Maleo, Project" name="keywords">
 
   <!-- Favicons -->
@@ -15,12 +15,9 @@
 
   <!-- Google Fonts -->
   <!-- <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet"> -->
-  <link
-    href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
 
-  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.0/css/all.css"
-    integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-6jHF7Z3XI3fF4XZixAuSu0gGKrXwoX/w3uFPxC56OtjChio7wtTGJWRW53Nhx6Ev" crossorigin="anonymous">
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
@@ -90,13 +87,12 @@
 
     <div class="container">
       <div class="row">
-        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
-          data-aos="fade-up" data-aos-delay="200">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
           <h1>Maleo Project</h1>
           <h2>{{$data->tag_line}}</h2>
           <div class="d-lg-flex">
             <a href="#about" class="btn-get-started scrollto">Get Started</a>
-            
+
             <a href="https://api.whatsapp.com/send?phone={{$data->handphone}}" target="_blank" class="btn-watch-video">Contact Us</a>
             <!-- <a href="https://www.youtube.com/watch?v=jDDaplaOz7Q" class="venobox btn-watch-video" data-vbtype="video" data-autoplay="true"> Watch Video <i class="icofont-play-alt-2"></i></a> -->
           </div>
@@ -157,18 +153,18 @@
         <div class="row content">
           <div class="col-lg-12 text-center">
             <p>
-                {{$data->about_us}}
+              {{$data->about_us}}
             </p>
-            
+
           </div>
-     
+
         </div>
 
       </div>
     </section><!-- End About Us Section -->
 
     <!-- ======= Why Us Section ======= -->
-   <section id="why-us" class="why-us section-bg">
+    <section id="why-us" class="why-us section-bg">
       <div class="container-fluid" data-aos="fade-up">
 
         <div class="row">
@@ -185,14 +181,14 @@
             <div class="accordion-list">
               <ul>
                 @foreach ($whyUs as $key=>$item)
-                  <li>
-                    <a data-toggle="collapse" class="collapse" href="#accordion-list-{{$key}}"><span>0{{$key+1}}</span> {{$item->pertanyaan}} <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
-                    <div id="accordion-list-{{$key}}" class="collapse {{$key==0?"show":''}}" data-parent=".accordion-list">
-                      <p>
-                        {{$item->jawaban}}
-                      </p>
-                    </div>
-                  </li>
+                <li>
+                  <a data-toggle="collapse" class="collapse" href="#accordion-list-{{$key}}"><span>0{{$key+1}}</span> {{$item->pertanyaan}} <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+                  <div id="accordion-list-{{$key}}" class="collapse {{$key==0?"show":''}}" data-parent=".accordion-list">
+                    <p>
+                      {{$item->jawaban}}
+                    </p>
+                  </div>
+                </li>
                 @endforeach
 
               </ul>
@@ -204,7 +200,7 @@
         </div>
 
       </div>
-    </section> 
+    </section>
     <!-- End Why Us Section -->
     <!-- End Skills Section -->
 
@@ -220,7 +216,7 @@
         <div class="row">
           <div class="col-xl-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
             <div class="icon-box">
-              <div class="icon"><i class='bx bx-photo-album' ></i></div>
+              <div class="icon"><i class='bx bx-photo-album'></i></div>
               <h4><a href="#">Design, Visual, dan Communication</a></h4>
               <p>
                 {{$data->d1}}
@@ -228,23 +224,21 @@
             </div>
           </div>
 
-          <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in"
-            data-aos-delay="200">
+          <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
             <div class="icon-box">
-              <div class="icon"><i class='bx bx bx-trending-up' ></i></div>
+              <div class="icon"><i class='bx bx bx-trending-up'></i></div>
               <h4><a href="#">Branding, Marketing dan Business Consultant</a></h4>
-              <p>                {{$data->d2}}
-            </p>
+              <p> {{$data->d2}}
+              </p>
             </div>
           </div>
 
-          <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
-            data-aos-delay="300">
+          <div class="col-xl-4 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="300">
             <div class="icon-box">
               <div class="icon"><i class='bx bx-book-reader'></i></div>
               <h4><a href="#">Riset dan Konsultan Penelitian</a></h4>
-              <p>                {{$data->d3}}
-            </p>
+              <p> {{$data->d3}}
+              </p>
             </div>
           </div>
 
@@ -252,24 +246,22 @@
         </div>
         <div class="row mt-4">
 
-          <div class="col-xl-6 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
-            data-aos-delay="400">
+          <div class="col-xl-6 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box">
               <div class="icon"><i class='bx bx-code-block'></i></div>
               <h4><a href="#">Software Development</a></h4>
-                <p>
+              <p>
                 {{$data->d4}}
 
-                </p>
+              </p>
             </div>
           </div>
-          <div class="col-xl-6 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in"
-            data-aos-delay="400">
+          <div class="col-xl-6 col-md-6 d-flex align-items-stretch mt-4 mt-xl-0" data-aos="zoom-in" data-aos-delay="400">
             <div class="icon-box">
               <div class="icon"><i class="bx bx-layer"></i></div>
               <h4><a href="#">Leadership, Problem Solving, dan Public Speaking</a></h4>
-              <p>                {{$data->d5}}
-            </p>
+              <p> {{$data->d5}}
+              </p>
             </div>
           </div>
         </div>
@@ -296,7 +288,7 @@
     <!-- End Cta Section -->
 
     <!-- ======= Portfolio Section ======= -->
-   <section id="portfolio" class="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -311,25 +303,25 @@
           <li data-filter=".filter-DCV">DCV</li>
           <li data-filter=".filter-IT">IT</li>
           <li data-filter=".filter-PublicSpeaking">Public Speaking</li>
-          
+
         </ul>
 
         <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
           @foreach($portofolio as $pt)
-          
+
           <div class="col-lg-4 col-md-6 portfolio-item filter-{{str_replace(' ','',$pt->jenis)}}">
             <div class="portfolio-img"><img src="<?php echo json_decode($pt->gambar)[0] ?>" class="img-fluid" alt=""></div>
             <div class="portfolio-info">
               <h4>{{$pt->judul}}</h4>
               <p>{{$pt->kategori}}</p>
-              
+
               {{-- <a href="portfolio-details.html" class="details-link" title="More Details"><i class="bx bx-link"></i></a> --}}
             </div>
           </div>
 
           @endforeach
-      
+
         </div>
 
       </div>
@@ -337,7 +329,7 @@
     <!-- End Portfolio Section -->
 
     <!-- ======= Team Section ======= -->
-    <section id="team" class="team section-bg">
+    <!-- <section id="team" class="team section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
@@ -452,25 +444,25 @@
         </div>
 
       </div>
-    </section>
+    </section> -->
     <!-- End Team Section -->
- <!-- ======= Cta Section ======= -->
- <section id="cta" class="cta">
-  <div class="container" data-aos="zoom-in">
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
 
-    <div class="row">
-      <div class="col-lg-9 text-center text-lg-left">
-        <h3>Join With Us</h3>
-        <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      <div class="col-lg-3 cta-btn-container text-center">
-        <a class="cta-btn align-middle" href="/member-area"> Member</a>
-      </div>
-    </div>
+        <div class="row">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3>Join With Us</h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="/member-area"> Member</a>
+          </div>
+        </div>
 
-  </div>
-</section>
-<!-- End Cta Section -->
+      </div>
+    </section>
+    <!-- End Cta Section -->
     {{-- <!-- ======= Pricing Section ======= -->
     <section id="pricing" class="pricing">
       <div class="container" data-aos="fade-up">
@@ -542,14 +534,13 @@
         <div class="section-title">
           <h2>Frequently Asked Questions</h2>
           <p></p>
-        </div>        <div class="faq-list">
+        </div>
+        <div class="faq-list">
           <ul>
             @foreach ($faq as $key =>$item)
-                
+
             <li data-aos="fade-up" data-aos-delay="100">
-              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse"
-                href="#faq-list-{{$key }}">{{$item->pertanyaan}} <i
-                  class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#faq-list-{{$key }}">{{$item->pertanyaan}} <i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
               <div id="faq-list-{{$key }}" class="collapse {{$key==0?"show":'' }}" data-parent=".faq-list">
                 <p>
                   {{$item->jawaban}}
@@ -575,7 +566,7 @@
         </div>
 
         <div class="row justify-content-center">
-           {{-- 
+          {{--
           <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info">
               <div class="address">
@@ -603,37 +594,36 @@
 
           </div> --}}
           <div class="col-lg-6 mt-5 mt-lg-0 d-flex align-items-stretch ">
-            
+
             <form action="/kontak" method="post" class="php-email-form">
-                {{-- <div class="error-message"> </div> --}}
-                @if ($message = Session::get('success'))
+              {{-- <div class="error-message"> </div> --}}
+              @if ($message = Session::get('success'))
               <div class="mb-3">
 
                 <div class="alert alert-success">{{ $message }}</div>
               </div>
 
-                 @endif
+              @endif
               @csrf
               <div class="form-row">
                 <div class="form-group col-md-6">
                   <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required   />
+                  <input type="text" name="name" class="form-control" id="name" required />
                 </div>
                 <div class="form-group col-md-6">
                   <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email"  required/>
+                  <input type="email" class="form-control" name="email" id="email" required />
                 </div>
               </div>
               <div class="form-group">
                 <label for="name">Phone</label>
-                <input type="tel" class="form-control" name="phone" id="phone" required  value="+62"/>
+                <input type="tel" class="form-control" name="phone" id="phone" required value="+62" />
               </div>
               <div class="form-group">
                 <label for="name">Message</label>
-                <textarea class="form-control" name="pesan" rows="3" required
-                  data-msg="Please write something for us"></textarea>
+                <textarea class="form-control" name="pesan" rows="3" required data-msg="Please write something for us"></textarea>
               </div>
-             
+
               <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
           </div>
@@ -671,8 +661,8 @@
             <h3>Maleo Project</h3>
             <p>
               {{$data->alamat}}<br>
-              <strong>Phone:</strong> <a href="https://api.whatsapp.com/send?phone=  {{$data->handphone}}" target="_blank">   {{$data->handphone}}</a> <br>
-              <strong>Email:</strong>  <a href="mailto:{{$data->email}}" target="_blank">{{$data->email}}</a> <br>
+              <strong>Phone:</strong> <a href="https://api.whatsapp.com/send?phone=  {{$data->handphone}}" target="_blank"> {{$data->handphone}}</a> <br>
+              <strong>Email:</strong> <a href="mailto:{{$data->email}}" target="_blank">{{$data->email}}</a> <br>
             </p>
           </div>
 
@@ -723,7 +713,7 @@
         <!-- You can delete the links only if you purchased the pro version. -->
         <!-- Licensing information: https://bootstrapmade.com/license/ -->
         <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/arsha-free-bootstrap-html-template-corporate/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Custom by azhmif 
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Custom by azhmif
       </div>
     </div>
   </footer><!-- End Footer -->
